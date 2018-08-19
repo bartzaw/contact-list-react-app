@@ -92,7 +92,7 @@ class newContactPanel extends Component {
             />
           </label>
 
-          <button className='contacts-addButton' title='Add new contact'>.</button>
+          <button className='contacts-addButton' title='Add new contact'>New</button>
         </form>
       </div>
     )
