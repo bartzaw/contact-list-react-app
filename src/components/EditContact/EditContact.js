@@ -2,10 +2,30 @@ import React, {Component} from 'react'
 import 'EditContact.css'
 
 class EditContact extends Component {
+
+  editContact = (e) => {
+    e.preventDefault();
+    const editedContact = {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      phoneNumber: this.state.phoneNumber,
+      email: this.state.email,
+    };
+    fetch(
+      'http://localhost:3001/contacts/' + this.props.contactId, {
+        method: 'PATCH',
+        body: JSON.stringify(editedContact),
+        headers: {
+          'Content-type': 'application/json'
+        }
+      }
+    ).then(this.props.getContacts)
+  };
+
   render() {
     return (
       <div>
-        <form className='edit-form' onSubmit={this.editContract}>
+        <form className='edit-form' onSubmit={this.editContact}>
           <label>
             First name:
             <input
