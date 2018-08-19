@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
 import EditContact from '../EditContact/EditContact'
+import './EditControlPanel.css'
 
 class EditControlPanel extends Component {
 
   render(){
     return(
-      <div className={'edit-panel'}>
+      <div className={!this.props.editPanelDisplay[this.props.contactId] ? "not-visible" : "visible"}>
         <EditContact
           firstName={this.props.firstName}
           lastName={this.props.lastName}
@@ -13,7 +14,7 @@ class EditControlPanel extends Component {
           email={this.props.email}
           contactId={this.props.contactId}
           getContacts={this.props.getContacts}
-          showEditPanel={this.props.showEditPanel}
+          showEditPanel={this.props.displayEditPanel}
         />
       </div>
     )
