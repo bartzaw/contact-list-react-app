@@ -6,6 +6,13 @@
       "lastName": "Kreft",
       "phoneNumber": "500-600-700",
       "email": "seba@mail.com"
+    },
+    {
+      "firstName": "Bartosz",
+      "lastName": "Zięba",
+      "phoneNumber": "888888888",
+      "email": "b@b.pl",
+      "id": 2
     }
   ]
 }

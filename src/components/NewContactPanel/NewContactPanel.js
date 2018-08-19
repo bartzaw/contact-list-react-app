@@ -33,13 +33,16 @@ class newContactPanel extends Component {
   render(){
     return (
       <div className='contacts-container'>
-        <form className='contacts-newContact'>
-
+        <form className='contacts-newContact' onSubmit={this.addContact}>
           <label>
             First name:
             <input
               name="firstName"
               type='text'
+              value={this.state.firstName}
+              onChange={(event) => this.setState(
+                {firstName: event.target.value
+                })}
             />
           </label>
 
@@ -48,6 +51,10 @@ class newContactPanel extends Component {
             <input
               name="lastName"
               type='text'
+              value={this.state.lastName}
+              onChange={(event) => this.setState(
+                {lastName: event.target.value
+                })}
             />
           </label>
 
@@ -56,6 +63,10 @@ class newContactPanel extends Component {
             <input
               name="phoneNumber"
               type='number'
+              value={this.state.phoneNumber}
+              onChange={(event) => this.setState(
+                {phoneNumber: event.target.value
+                })}
             />
           </label>
 
@@ -64,10 +75,14 @@ class newContactPanel extends Component {
             <input
               name="emailAddress"
               type='mail'
+              value={this.state.email}
+              onChange={(event) => this.setState(
+                {email: event.target.value
+                })}
             />
           </label>
 
-          <div className='contacts-addButton' title='Add new contact'>.</div>
+          <button className='contacts-addButton' title='Add new contact'>.</button>
         </form>
       </div>
     )
