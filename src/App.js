@@ -9,7 +9,7 @@ class App extends Component {
   };
 
   getContacts = () => {
-    fetch('http://localhost:3000/contacts')
+    fetch('http://localhost:3001/contacts')
       .then(response => {
         return response.json()
       })
@@ -30,12 +30,15 @@ class App extends Component {
     return 0;
   };
 
+  componentDidMount(){
+    this.getContacts()
+  }
 
   render() {
     return (
       <div className='App'>
         <h1>Contact App</h1>
-        <NewContactPanel />
+        <NewContactPanel getContacts={this.getContacts}/>
       </div>
     );
   }
