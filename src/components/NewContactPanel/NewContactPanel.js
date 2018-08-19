@@ -9,10 +9,20 @@ class newContactPanel extends Component {
     lastName: '',
     phoneNumber: '',
     email: '',
+  };
+
+  clearInputValue = () => {
+    this.setState({
+      firstName: '',
+      lastName: '',
+      phoneNumber: '',
+      email: ''
+    })
   }
 
   addContact = (event) => {
     event.preventDefault();
+    this.clearInputValue()
     const newContactItem = {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
