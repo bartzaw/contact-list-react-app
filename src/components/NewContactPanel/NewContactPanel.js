@@ -2,6 +2,15 @@ import React, {Component} from 'react'
 import './NewContactPanel.css'
 
 class newContactPanel extends Component {
+
+  state = {
+    contacts: [],
+    firstName: '',
+    lastName: '',
+    phoneNumber: '',
+    email: '',
+  }
+
   render(){
     return (
       <div className='contacts-container'>
