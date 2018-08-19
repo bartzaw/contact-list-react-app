@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import DisplayContact from '../DisplayContact/DisplayContact'
 import './ContactList.css'
+import EditControlPanel from "../EditControlPanel/EditControlPanel";
 
 class ContactList extends Component {
+
   state = {
     editPanelDisplay: {}
   };
@@ -42,7 +44,16 @@ class ContactList extends Component {
               />
             <button onClick={() => this.removeContact(contact.id)}>Remove</button>
             <button onClick={() => this.displayEditPanel(contact.id)}>Edit</button>
-
+              <EditControlPanel
+              key={contact.id}
+              firstName={contact.firstName}
+              lastName={contact.lastName}
+              phoneNumber={contact.phoneNumber}
+              email={contact.email}
+              getContacts={this.props.getContacts}
+              displayEditPanel={this.displayEditPanel}
+              editPanelDisplay={this.state.editPanelDisplay}
+              />
             </li>
           </div>
         )
