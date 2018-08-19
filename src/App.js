@@ -15,7 +15,7 @@ class App extends Component {
         return response.json()
       })
       .then(data => {
-        const contactList = data.sort(this.sortContacts).map(contact=>contact)
+        const contactList = data.sort(this.sortContacts);
         this.setState({
           contacts: contactList
         })
