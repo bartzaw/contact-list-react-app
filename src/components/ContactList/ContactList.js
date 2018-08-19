@@ -46,6 +46,7 @@ class ContactList extends Component {
             <button onClick={() => this.displayEditPanel(contact.id)}>Edit</button>
               <EditControlPanel
               key={contact.id}
+              contactId = {contact.id}
               firstName={contact.firstName}
               lastName={contact.lastName}
               phoneNumber={contact.phoneNumber}
