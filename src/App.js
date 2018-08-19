@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import NewContactPanel from './components/NewContactPanel/NewContactPanel'
+import ContactList from './components/ContactList/ContactList'
 
 class App extends Component {
 
@@ -39,6 +40,11 @@ class App extends Component {
       <div className='App'>
         <h1>Contact App</h1>
         <NewContactPanel getContacts={this.getContacts}/>
+        <ContactList
+          contactsReceived={this.state.contacts}
+          sortContacts={this.sortContacts}
+          getContacts={this.getContacts}
+        />
       </div>
     );
   }
