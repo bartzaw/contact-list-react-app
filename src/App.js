@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import NewContactPanel from './components/NewContactPanel/NewContactPanel'
 
 class App extends Component {
 
@@ -32,7 +33,10 @@ class App extends Component {
 
   render() {
     return (
-      <ul id="contacts"></ul>
+      <div className='App'>
+        <h1>Contact App</h1>
+        <NewContactPanel />
+      </div>
     );
   }
 }

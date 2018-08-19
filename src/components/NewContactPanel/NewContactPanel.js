@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './newContactPanel.css'
+import './NewContactPanel.css'
 
 class newContactPanel extends Component {
   render(){
