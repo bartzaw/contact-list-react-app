@@ -1,7 +1,19 @@
 import React, {Component} from 'react'
-import 'EditContact.css'
+import './EditContact.css'
 
 class EditContact extends Component {
+
+  state = {
+    contacts: [],
+    firstName: this.props.firstName,
+    lastName: this.props.lastName,
+    phoneNumber: this.props.phoneNumber,
+    email: this.props.email,
+  };
+
+  componentDidMount() {
+    this.props.getContacts()
+  }
 
   editContact = (e) => {
     e.preventDefault();
