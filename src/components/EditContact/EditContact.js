@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import './EditContact.css'
 
 class EditContact extends Component {
 
