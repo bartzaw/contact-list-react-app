@@ -24,7 +24,7 @@ class ContactList extends Component {
           'Content-Type': 'application/json'
         }
       }
-    ).then(this.props.getContacts)
+    ).then(this.props.downloadContacts)
   };
 
   render() {
@@ -50,7 +50,7 @@ class ContactList extends Component {
               lastName={contact.lastName}
               phoneNumber={contact.phoneNumber}
               email={contact.email}
-              getContacts={this.props.getContacts}
+              getContacts={this.props.downloadContacts}
               displayEditPanel={this.displayEditPanel}
               editPanelDisplay={this.state.editPanelDisplay}
               />

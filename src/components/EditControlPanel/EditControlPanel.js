@@ -14,7 +14,7 @@ class EditControlPanel extends Component {
           phoneNumber={this.props.phoneNumber}
           email={this.props.email}
           contactId={this.props.contactId}
-          getContacts={this.props.getContacts}
+          getContacts={this.props.downloadContacts}
           showEditPanel={this.props.displayEditPanel}
         />
       </div>
