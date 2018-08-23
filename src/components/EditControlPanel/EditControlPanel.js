@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import EditContact from '../EditContact/EditContact'
 import './EditControlPanel.css'
 
+
 class EditControlPanel extends Component {
 
   render(){

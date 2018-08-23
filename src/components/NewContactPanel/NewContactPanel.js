@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import './NewContactPanel.css'
 
 class newContactPanel extends Component {
 

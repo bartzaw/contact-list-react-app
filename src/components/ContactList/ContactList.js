@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import DisplayContact from '../DisplayContact/DisplayContact'
-import './ContactList.css'
 import EditControlPanel from "../EditControlPanel/EditControlPanel";
 
 class ContactList extends Component {
