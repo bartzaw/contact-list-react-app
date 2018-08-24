@@ -2,11 +2,24 @@ import React, {Component} from 'react'
 import styled from 'styled-components'
 import saveButton from '../images/saveButton.png'
 
+
+const EditMode = styled.div`
+  display: flex;  
+`;
+
+const EditedContactLabel = styled.label`
+  font-weight: bold;
+  width: 125px;
+  align-self: center;
+  color: #C2B17A;
+`;
+
 const SaveButton = styled.button`
   background: url(${saveButton}) no-repeat center center;
   height: 81px;
   width: 81px;
   background-color: #fff;
+  margin: -10px 25px;
 `;
 
 class EditContact extends Component {
@@ -44,9 +57,9 @@ class EditContact extends Component {
 
   render() {
     return (
-      <div>
+      <EditMode>
         <form className='edit-form' onSubmit={this.editContact}>
-          <label>
+          <EditedContactLabel>
             First name:
             <input
               name="firstName"
@@ -56,9 +69,9 @@ class EditContact extends Component {
                 {firstName: event.target.value
                 })}
             />
-          </label>
+          </EditedContactLabel>
 
-          <label>
+          <EditedContactLabel>
             Last name:
             <input
               name="lastName"
@@ -68,9 +81,9 @@ class EditContact extends Component {
                 {lastName: event.target.value
                 })}
             />
-          </label>
+          </EditedContactLabel>
 
-          <label>
+          <EditedContactLabel>
             Phone number:
             <input
               name="phoneNumber"
@@ -80,9 +93,9 @@ class EditContact extends Component {
                 {phoneNumber: event.target.value
                 })}
             />
-          </label>
+          </EditedContactLabel>
 
-          <label>
+          <EditedContactLabel>
             Email:
             <input
               name="emailAddress"
@@ -92,10 +105,10 @@ class EditContact extends Component {
                 {email: event.target.value
                 })}
             />
-          </label>
+          </EditedContactLabel>
           <SaveButton></SaveButton>
         </form>
-      </div>
+      </EditMode>
     )
   }
 }
