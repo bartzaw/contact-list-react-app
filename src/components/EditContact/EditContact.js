@@ -11,7 +11,7 @@ class EditContact extends Component {
   };
 
   componentDidMount() {
-    this.props.downloadContacts()
+    this.props.getContacts()
   }
 
   editContact = (e) => {
@@ -30,7 +30,7 @@ class EditContact extends Component {
           'Content-type': 'application/json'
         }
       }
-    ).then(this.props.downloadContacts)
+    ).then(this.props.getContacts)
   };
 
   render() {

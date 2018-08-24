@@ -9,7 +9,7 @@ class App extends Component {
     contacts: [],
   };
 
-  downloadContacts = () => {
+  getContacts = () => {
     fetch('http://localhost:3001/contacts')
       .then(response => {
         return response.json()
@@ -32,18 +32,18 @@ class App extends Component {
   };
 
   componentDidMount(){
-    this.downloadContacts()
+    this.getContacts()
   }
 
   render() {
     return (
       <div className='App'>
         <h1>Contact App</h1>
-        <NewContactPanel getContacts={this.downloadContacts}/>
+        <NewContactPanel getContacts={this.getContacts}/>
         <ContactList
           contactsReceived={this.state.contacts}
           sortContacts={this.sortContacts}
-          getContacts={this.downloadContacts}
+          getContacts={this.getContacts}
         />
       </div>
     );

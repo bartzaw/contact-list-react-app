@@ -36,7 +36,7 @@ class newContactPanel extends Component {
           'Content-type': 'application/json'
         }
       }
-    ).then(this.props.downloadContacts)
+    ).then(this.props.getContacts)
   };
 
   render(){
