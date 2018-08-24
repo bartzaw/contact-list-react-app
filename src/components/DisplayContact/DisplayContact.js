@@ -10,13 +10,22 @@ const ContactCard = styled.div`
   border: 1px dashed #9045B5
 `;
 
+const ContactData = styled.p`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24%;
+  font-size: 20px;
+`;
+
 class ContactDetailedInfo extends Component {
   render() {
     return (
       <ContactCard>
-        <p>{this.props.firstName} {this.props.lastName}</p>
-        <p>{this.props.phoneNumber}</p>
-        <p>{this.props.email}</p>
+        <ContactData>{this.props.firstName}</ContactData>
+        <ContactData>{this.props.lastName}</ContactData>
+        <ContactData>{this.props.phoneNumber}</ContactData>
+        <ContactData>{this.props.email}</ContactData>
       </ContactCard>
     )
   }
