@@ -2,9 +2,16 @@ import React, { Component } from 'react';
 import './App.css';
 import NewContactPanel from './components/NewContactPanel/NewContactPanel'
 import ContactList from './components/ContactList/ContactList'
+import styled from 'styled-components'
+
+const NewContactHeader = styled.h1`
+  text-align: center;
+  font-weight: bold;
+`;
+
+
 
 class App extends Component {
-
   state = {
     contacts: [],
   };
@@ -38,7 +45,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <h1>Contact App</h1>
+        <NewContactHeader>Contact App</NewContactHeader>
         <NewContactPanel getContacts={this.getContacts}/>
         <ContactList
           contactsReceived={this.state.contacts}
