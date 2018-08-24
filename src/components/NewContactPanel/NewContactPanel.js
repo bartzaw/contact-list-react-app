@@ -7,29 +7,31 @@ const AddButton = styled.button`
   margin: auto;
   height: 81px;
   width: 81px;
+  background-color: #fefefe;
 `;
 
 const NewContact = styled.form`
-    text-align: center;
-    align-self: center;
-    height: 25%;
-    display: flex;
-    flex-wrap: wrap;
-    width: 75%;
-    border: 3px solid #000;
+  text-align: center;
+  align-self: center;
+  height: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+  border: 3px solid #000;
 `;
 
 const NewContactItem = styled.div`
-    display: flex;
-    width: 50%;
-    height: 50px;
-    justify-content: center;
+  display: flex;
+  width: 50%;
+  height: 50px;
+  justify-content: center;
 `;
 
 const ContactLabel = styled.label`
   font-weight: bold;
   width: 125px;
   align-self: center;
+  color: #C2B17A;
 `;
 
 const ContactListContainer = styled.div`

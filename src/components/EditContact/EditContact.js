@@ -6,6 +6,7 @@ const SaveButton = styled.button`
   background: url(${saveButton}) no-repeat center center;
   height: 81px;
   width: 81px;
+  background-color: #fff;
 `;
 
 class EditContact extends Component {

@@ -16,12 +16,14 @@ const EditButton = styled.button`
     background: url(${editbtnimage}) no-repeat center center;
     height: 81px;
     width: 81px;
+    background-color: #fff;
 `;
 
 const DeleteButton = styled.button`
   background: url(${savebtnimage}) no-repeat center center;
   height: 81px;
   width: 81px;
+  background-color: #fff;
 `;
 
 class ContactList extends Component {

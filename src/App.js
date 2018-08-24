@@ -3,13 +3,19 @@ import './App.css';
 import NewContactPanel from './components/NewContactPanel/NewContactPanel'
 import ContactList from './components/ContactList/ContactList'
 import styled from 'styled-components'
+import appBackground from './components/images/black-background.jpg'
 
 const NewContactHeader = styled.h1`
   text-align: center;
   font-weight: bold;
+  color: #C2B17A;
 `;
 
-
+const AppBody = styled.div`
+  box-sizing: border-box;
+  margin: 0;
+  background: url(${appBackground})
+`;
 
 class App extends Component {
   state = {
@@ -44,7 +50,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className='App'>
+      <AppBody className='App'>
         <NewContactHeader>Contact App</NewContactHeader>
         <NewContactPanel getContacts={this.getContacts}/>
         <ContactList
@@ -52,7 +58,7 @@ class App extends Component {
           sortContacts={this.sortContacts}
           getContacts={this.getContacts}
         />
-      </div>
+      </AppBody>
     );
   }
 }
