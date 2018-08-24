@@ -1,6 +1,25 @@
 import React, { Component } from 'react'
 import DisplayContact from '../DisplayContact/DisplayContact'
 import EditControlPanel from "../EditControlPanel/EditControlPanel";
+import styled from 'styled-components'
+import editbtnimage from '../images/editButton.png'
+import savebtnimage from '../images/deleteButton.png'
+
+const MainList = styled.ul`
+  list-style: none;
+`;
+
+const EditButton = styled.button`
+    background: url(${editbtnimage}) no-repeat center center;
+    height: 81px;
+    width: 81px;
+`;
+
+const DeleteButton = styled.button`
+  background: url(${savebtnimage}) no-repeat center center;
+  height: 81px;
+  width: 81px;
+`;
 
 class ContactList extends Component {
 
@@ -30,7 +49,7 @@ class ContactList extends Component {
   render() {
     const contacts = this.props.contactsReceived;
     return (
-      <ul className='contact-list'>
+      <MainList>
         {contacts.map(contact => {
         return (
           <div>
@@ -41,8 +60,8 @@ class ContactList extends Component {
                 phoneNumber={contact.phoneNumber}
                 email={contact.email}
               />
-            <button onClick={() => this.removeContact(contact.id)}>Remove</button>
-            <button onClick={() => this.displayEditPanel(contact.id)}>Edit</button>
+            <DeleteButton onClick={() => this.removeContact(contact.id)}></DeleteButton>
+            <EditButton onClick={() => this.displayEditPanel(contact.id)}></EditButton>
               <EditControlPanel
               key={contact.id}
               contactId = {contact.id}
@@ -58,7 +77,7 @@ class ContactList extends Component {
           </div>
         )
         })}
-      </ul>
+      </MainList>
     )
   }
 }
