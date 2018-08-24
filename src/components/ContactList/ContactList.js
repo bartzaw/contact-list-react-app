@@ -7,6 +7,9 @@ import savebtnimage from '../images/deleteButton.png'
 
 const MainList = styled.ul`
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
 `;
 
 const EditButton = styled.button`

@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import styled from 'styled-components'
 
 const ContactCard = styled.div`
-  width: 72%;
+  width: 98%;
   background: #C2B17A;
   display: flex;
   flex-wrap: bold;
