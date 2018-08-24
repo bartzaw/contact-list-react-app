@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Router, Route, Switch} from 'react-router'
 import './App.css';
 import NewContactPanel from './components/NewContactPanel/NewContactPanel'
 import ContactList from './components/ContactList/ContactList'
@@ -32,6 +33,7 @@ class App extends Component {
         this.setState({
           contacts: contactList
         })
+        localStorage.setItem('contacts', JSON.stringify(this.state.contacts))
       })
   };
 
