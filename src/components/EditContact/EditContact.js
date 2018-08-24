@@ -1,4 +1,12 @@
 import React, {Component} from 'react'
+import styled from 'styled-components'
+import saveButton from '../images/saveButton.png'
+
+const SaveButton = styled.button`
+  background: url(${saveButton}) no-repeat center center;
+  height: 81px;
+  width: 81px;
+`;
 
 class EditContact extends Component {
 
@@ -84,7 +92,7 @@ class EditContact extends Component {
                 })}
             />
           </label>
-          <button className='save-button'>Save</button>
+          <SaveButton></SaveButton>
         </form>
       </div>
     )
